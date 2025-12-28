@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Year</title>
+
+<style>
+body {
+  background: #111;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  padding-top: 80px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#yes { background: white; color: black; }
+#no  { background: #333; color: white; position: absolute; }
+
+img {
+  width: 80%;
+  max-width: 350px;
+  display: none;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Happy New Year 🎉</h2>
+<p>Same people, new year?</p>
+
+<button id="yes" onclick="show()">YES</button>
+<button id="no" onmouseover="move()">NO</button>
+
+<img src="group.jpg" id="pic">
+
+<script>
+function move() {
+  document.getElementById("no").style.left =
+  Math.random()*250 + "px";
+  document.getElementById("no").style.top =
+  Math.random()*250 + "px";
+}
+
+function show() {
+  document.getElementById("pic").style.display="block";
+}
+</script>
+
+</body>
+</html>
